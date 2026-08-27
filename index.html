@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PrintLab — 3D-печать на заказ</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header class="header"><div class="container nav">
+<a class="logo" href="#"><span>◈</span> PrintLab</a>
+<nav><a href="#catalog">Каталог</a><a href="#stock">В наличии</a><a href="#services">Услуги</a><a href="#order">Заказать</a></nav>
+<a class="nav-button" id="navTelegram" href="#order">Telegram</a>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-grid"><div>
+<div class="badge">● 3D-ПЕЧАТЬ НА ЗАКАЗ</div>
+<h1>Вещи, которые<br><span>можно напечатать.</span></h1>
+<p>Выбирай модель из каталога или отправляй свой файл — я напечатаю её на 3D-принтере.</p>
+<div class="hero-actions"><a class="button primary" href="#catalog">Смотреть каталог →</a><a class="button secondary" href="#stock">Что есть в наличии</a></div>
+<div class="stats"><div><b>01</b><span>Выбираешь модель</span></div><div><b>02</b><span>Выбираешь цвет</span></div><div><b>03</b><span>Получаешь готовую вещь</span></div></div>
+</div><div class="hero-card"><div class="printer-icon">🖨️</div><div class="floating-card top">PLA / PETG<br><small>Разные материалы</small></div><div class="floating-card bottom">Bambu Lab A1<br><small>Точная печать</small></div></div></div></section>
+
+<section id="catalog" class="section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">MAKERWORLD</div><h2>Лента моделей</h2><p>Подборка моделей. Нажми на карточку, чтобы открыть её на MakerWorld.</p></div>
+<a class="maker-button" href="https://makerworld.com/en/3d-models" target="_blank" rel="noopener">Открыть MakerWorld ↗</a></div>
+<div class="filters"><button class="filter active" data-filter="all">Все</button><button class="filter" data-filter="desk">Для стола</button><button class="filter" data-filter="decor">Декор</button><button class="filter" data-filter="organizer">Органайзеры</button><button class="filter" data-filter="phone">Для телефона</button></div>
+<div id="catalog-grid" class="catalog-grid"></div>
+<div class="feed-footer"><p>Прямую динамическую ленту MakerWorld нельзя надёжно встроить в статический GitHub Pages-сайт, поэтому здесь сделан похожий каталог со ссылками на реальные страницы MakerWorld.</p><a class="button secondary" href="https://makerworld.com/en/3d-models" target="_blank">Больше моделей →</a></div>
+</div></section>
+
+<section id="stock" class="section stock-section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">ГОТОВО К ЗАКАЗУ</div><h2>В наличии</h2><p>Здесь будут вещи, которые уже напечатаны.</p></div><span class="stock-counter" id="stockCounter"></span></div>
+<div id="stock-grid" class="catalog-grid"></div><p id="emptyStock" class="empty-stock">Пока ничего нет в наличии. Добавь товары в массив <b>stock</b> в <code>script.js</code>.</p>
+</div></section>
+
+<section id="services" class="section dark-section"><div class="container"><div class="eyebrow">ЧТО МОЖНО ЗАКАЗАТЬ</div><h2>Печатаю то, что тебе нужно</h2>
+<div class="service-grid"><article class="service"><div>🧩</div><h3>Детали</h3><p>Полезные детали, крепления и запчасти.</p></article><article class="service"><div>🗃️</div><h3>Организация</h3><p>Подставки, боксы, держатели и органайзеры.</p></article><article class="service"><div>🎨</div><h3>Декор</h3><p>Фигурки, украшения и необычные предметы.</p></article><article class="service"><div>📁</div><h3>Ваш файл</h3><p>Присылай STL или 3MF — оценю возможность печати.</p></article></div>
+</div></section>
+
+<section id="order" class="section order-section"><div class="container order-box"><div><div class="eyebrow">ЗАКАЗ</div><h2>Нашёл модель?</h2><p>Напиши в Telegram название модели, ссылку на MakerWorld, цвет и количество.</p></div><a class="button primary large" id="telegram" href="#order">Telegram →</a></div></section>
+
+<section class="section guide-section"><div class="container"><div class="eyebrow">НАСТРОЙКА</div><h2>Как обновлять сайт</h2>
+<div class="guide-grid"><article class="guide"><b>01</b><h3>Добавить модель</h3><p>В <code>script.js</code> добавь строку в массив <code>models</code> с названием и прямой ссылкой MakerWorld.</p></article>
+<article class="guide"><b>02</b><h3>Добавить наличие</h3><p>В массив <code>stock</code> добавь название, цену, описание и ссылку заказа.</p></article>
+<article class="guide"><b>03</b><h3>Подключить Telegram</h3><p>В начале <code>script.js</code> замени пустую <code>telegramUrl</code> на ссылку вида <code>https://t.me/username</code>.</p></article>
+<article class="guide"><b>04</b><h3>Опубликовать изменения</h3><p>Загрузи изменённый <code>script.js</code> в GitHub и нажми <b>Commit changes</b>. Pages обновится автоматически.</p></article></div>
+</div></section>
+</main><footer><div class="container footer"><span>© 2026 PrintLab</span><span>3D-печать на заказ</span></div></footer>
+<script src="script.js"></script></body></html>
