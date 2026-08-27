@@ -1,6 +1,6 @@
 // Вставь сюда свою ссылку Telegram, например:
 // const telegramUrl = "https://t.me/your_username";
-const telegramUrl = "";
+const telegramUrl = "https://t.me/LunslyCORP";
 
 const models = [
  {title:"Модель для стола",cat:"desk",icon:"✏️",author:"Добавить автора",link:"https://makerworld.com/en/3d-models"},
